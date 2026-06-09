@@ -1,0 +1,15 @@
+{
+  "title": "PPG: Provenance-Polarity Gating for Hallucination Detection",
+  "summary": "Generated a complete 11-page LaTeX paper on Provenance-Polarity Gating (PPG), a framework for multi-axis invariance fingerprinting of hallucinated premises in neuro-symbolic reasoning. The paper includes all six sections: Introduction, Background and Related Work, Method (Provenance-Polarity Gating), Pilot Experiment, Discussion, and Conclusion. All four figures were included: fig1 (pipeline architecture, figure*[!t]), fig2 (pre-flight axis separability bar chart, figure*[!t]), fig3 (HPR results by domain, figure*[!t]), and fig4 (threshold sensitivity conceptual diagram, figure*[!t]). BibTeX was fetched via aii_semscholar_bib__fetch for 13/15 references; the two missing entries (Dalvi 2021 Entailment Trees, Manhaeve 2018 DeepProbLog) were added manually using verified metadata. The paper compiled successfully to PDF using the full pdflatex/bibtex/pdflatex/pdflatex cycle. All 11 pages were reviewed visually: layout is clean, figures render at full width, the accuracy table is properly formatted with booktabs, citations resolve correctly, and the bibliography is complete. The grep -c includegraphics count equals 4, matching the 4 available figures.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg",
+      "figures/fig3_v0.jpg",
+      "figures/fig4_v0.jpg"
+    ]
+  }
+}

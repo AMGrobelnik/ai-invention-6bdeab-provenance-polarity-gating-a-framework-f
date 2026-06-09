@@ -1,0 +1,89 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Pan2023,Olausson2023}
+\citation{Pan2023}
+\citation{Olausson2023}
+\citation{Liu2024}
+\citation{Li2025}
+\citation{Olausson2023}
+\citation{Liu2024}
+\citation{Li2025}
+\citation{Qin2025}
+\citation{Min2023}
+\citation{Peters2016}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The Provenance-Polarity Gate (PPG) pipeline. An LLM translator extracts premises and declares a provenance class (A=document-extensional, B=world-knowledge-universal, C=document-stipulated). The three-axis endorsement battery measures each premise's invariance fingerprint across document-presence, entity-renaming, and query-counterfactual interventions. The gate admits a premise only when its measured fingerprint matches the polarity required by its declared class. Admitted premises feed a SWI-Prolog backward chainer that emits a human-auditable trace-graph.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{2}{The Provenance-Polarity Gate (PPG) pipeline. An LLM translator extracts premises and declares a provenance class (A=document-extensional, B=world-knowledge-universal, C=document-stipulated). The three-axis endorsement battery measures each premise's invariance fingerprint across document-presence, entity-renaming, and query-counterfactual interventions. The gate admits a premise only when its measured fingerprint matches the polarity required by its declared class. Admitted premises feed a SWI-Prolog backward chainer that emits a human-auditable trace-graph}{figure.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Summary of Contributions.}{2}{section*.1}\protected@file@percent }
+\citation{Pan2023}
+\citation{Olausson2023}
+\citation{Liu2024}
+\citation{Li2025}
+\citation{Qin2025}
+\citation{Min2023}
+\citation{Peters2016}
+\citation{Arjovsky2019}
+\citation{Sun2024}
+\citation{Sinha2019}
+\citation{Manhaeve2018}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background and Related Work}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Neuro-symbolic reasoning pipelines.}{3}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Premise verification.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Invariance as a signal.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Probabilistic logic.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method: Provenance-Polarity Gating}{4}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{4}{Method: Provenance-Polarity Gating}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Provenance Taxonomy and Fingerprint Definitions}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Three-Axis Intervention Battery}{4}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Admission Rule}{4}{subsection.3.3}\protected@file@percent }
+\citation{Wei2022}
+\citation{Wang2022}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Trace-Graph Output}{5}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Pilot Experiment}{5}{section.4}\protected@file@percent }
+\newlabel{sec:pilot}{{4}{5}{Pilot Experiment}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Setup}{5}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Datasets.}{5}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pre-flight axis-separability test (Phase 0).}{5}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pilot baseline (Phase 1).}{5}{section*.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Pre-flight endorsement rates across three item types ($n=10$ each) on the synthetic bait set. Type A (genuine universal rules) maintains high endorsement (mean$=0.95$) regardless of intervention; Type B (bait/confabulation items) shows endorsement$=0.00$; Type C (document-extensional facts) varies by axis. Kruskal-Wallis $H=27.36$, $p=1.14\times 10^{-6}$. These results confirm axis separability on synthetic items but cannot be generalized to real document hallucinations without a matched real-output calibration study.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:preflight}{{2}{6}{Pre-flight endorsement rates across three item types ($n=10$ each) on the synthetic bait set. Type A (genuine universal rules) maintains high endorsement (mean$=0.95$) regardless of intervention; Type B (bait/confabulation items) shows endorsement$=0.00$; Type C (document-extensional facts) varies by axis. Kruskal-Wallis $H=27.36$, $p=1.14\times 10^{-6}$. These results confirm axis separability on synthetic items but cannot be generalized to real document hallucinations without a matched real-output calibration study}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Results}{6}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Accuracy.}{6}{section*.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Per-condition accuracy with 95\% bootstrap CIs. CI width of 0.40 for \texttt  {logic\_lm} indicates underpowered estimate.}}{6}{table.1}\protected@file@percent }
+\newlabel{tab:accuracy}{{1}{6}{Per-condition accuracy with 95\% bootstrap CIs. CI width of 0.40 for \texttt {logic\_lm} indicates underpowered estimate}{table.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Hallucinated-premise rate.}{6}{section*.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Hallucinated-premise rates (HPR) before and after PPG filtering, stratified by domain. In the kinship domain ($n=15$ instances, $n_{\mathrm  {premises\_nogate}}=72$, $n_{\mathrm  {admitted}}=9$), the gate achieves a minor HPR reduction (0.083 $\to $ 0.067) that is severely underpowered (achieved power$=0.62$, MDE$=0.54$ vs.\ observed $\delta =0.017$). In the stipulated domain ($n=5$ instances), the gate worsens HPR (0.600 $\to $ 0.833). Combined: HPR$_{\mathrm  {nogate}}=0.225$, HPR$_{\mathrm  {gate}}=0.667$ ($z=3.21$, $p=0.0013$, gate worsens HPR). Root cause: $\tau _{\mathrm  {high}}=0.40$ causes 95.3\% rejection in the kinship domain (admission rate$=4.7\%$) while admitting predominantly hallucinated stipulated premises.}}{7}{figure.3}\protected@file@percent }
+\newlabel{fig:hpr}{{3}{7}{Hallucinated-premise rates (HPR) before and after PPG filtering, stratified by domain. In the kinship domain ($n=15$ instances, $n_{\mathrm {premises\_nogate}}=72$, $n_{\mathrm {admitted}}=9$), the gate achieves a minor HPR reduction (0.083 $\to $ 0.067) that is severely underpowered (achieved power$=0.62$, MDE$=0.54$ vs.\ observed $\delta =0.017$). In the stipulated domain ($n=5$ instances), the gate worsens HPR (0.600 $\to $ 0.833). Combined: HPR$_{\mathrm {nogate}}=0.225$, HPR$_{\mathrm {gate}}=0.667$ ($z=3.21$, $p=0.0013$, gate worsens HPR). Root cause: $\tau _{\mathrm {high}}=0.40$ causes 95.3\% rejection in the kinship domain (admission rate$=4.7\%$) while admitting predominantly hallucinated stipulated premises}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Root-Cause Analysis: Threshold Miscalibration}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Implications for calibration.}{7}{section*.11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Conceptual diagram showing how gate admission rate (left $y$-axis) and hallucinated-premise rate of admitted premises (right $y$-axis) are expected to vary with $\tau _{\mathrm  {high}}$ for a low-variance model (Gemma-26B on kinship). At $\tau _{\mathrm  {high}}=0.40$ (the value used in the pilot), admission rate collapses to 4.7\% and the gate becomes uninformative. A $\tau _{\mathrm  {high}}$ in $[0.05, 0.15]$ is hypothesized to balance admission rate and filtering precision. This diagram motivates the calibration pilot protocol recommended in Section~\ref {sec:discussion}.}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig:threshold}{{4}{8}{Conceptual diagram showing how gate admission rate (left $y$-axis) and hallucinated-premise rate of admitted premises (right $y$-axis) are expected to vary with $\tau _{\mathrm {high}}$ for a low-variance model (Gemma-26B on kinship). At $\tau _{\mathrm {high}}=0.40$ (the value used in the pilot), admission rate collapses to 4.7\% and the gate becomes uninformative. A $\tau _{\mathrm {high}}$ in $[0.05, 0.15]$ is hypothesized to balance admission rate and filtering precision. This diagram motivates the calibration pilot protocol recommended in Section~\ref {sec:discussion}}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{8}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{8}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}What the Pre-flight Result Does and Does Not Show}{8}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Why the Theoretical Framework Remains Motivated}{8}{subsection.5.2}\protected@file@percent }
+\citation{Peters2016}
+\citation{Arjovsky2019}
+\citation{Peters2016}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Multi-Axis vs.\ Single-Axis Advantage}{9}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Limitations}{9}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Connection to Causal Inference}{9}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{9}{section.6}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Arjovsky2019}{{1}{2019}{{Arjovsky et~al.}}{{Arjovsky, Bottou, Gulrajani, and Lopez-Paz}}}
+\bibcite{Li2025}{{2}{2025}{{Li et~al.}}{{Li, Cheng, Liu, Wang, Zeng, and Liu}}}
+\bibcite{Manhaeve2018}{{3}{2018}{{Manhaeve et~al.}}{{Manhaeve, Dumancic, Kimmig, Demeester, and Raedt}}}
+\bibcite{Min2023}{{4}{2023}{{Min et~al.}}{{Min, Krishna, Lyu, Lewis, tau Yih, Koh, Iyyer, Zettlemoyer, and Hajishirzi}}}
+\bibcite{Olausson2023}{{5}{2023}{{Olausson et~al.}}{{Olausson, Gu, Lipkin, Zhang, Solar-Lezama, Tenenbaum, and Levy}}}
+\bibcite{Pan2023}{{6}{2023}{{Pan et~al.}}{{Pan, Albalak, Wang, and Wang}}}
+\bibcite{Peters2016}{{7}{2016}{{Peters et~al.}}{{Peters, B{\"u}hlmann, and Meinshausen}}}
+\bibcite{Qin2025}{{8}{2025}{{Qin et~al.}}{{Qin, Li, Nian, Yu, Zhao, and Ma}}}
+\bibcite{Sinha2019}{{9}{2019}{{Sinha et~al.}}{{Sinha, Sodhani, Dong, Pineau, and Hamilton}}}
+\bibcite{Sun2024}{{10}{2024}{{Sun et~al.}}{{Sun, Zhang, Zhang, Yu, Huang, Xu, He, Zhao, and Liu}}}
+\bibcite{Wang2022}{{11}{2022}{{Wang et~al.}}{{Wang, Wei, Schuurmans, Le, Chi, and Zhou}}}
+\bibcite{Wei2022}{{12}{2022}{{Wei et~al.}}{{Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and Zhou}}}
+\bibcite{Liu2024}{{13}{2024}{{Xu et~al.}}{{Xu, Fei, Pan, Liu, Lee, and Hsu}}}
+\gdef \@abspage@last{11}

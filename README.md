@@ -1,0 +1,84 @@
+# AI Invention Research Repository
+
+This repository contains artifacts from an AI-generated research project.
+
+## Research Paper
+
+[![Download PDF](https://img.shields.io/badge/Download-PDF-red)](https://cdn.jsdelivr.net/gh/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f@main/paper.pdf) [![LaTeX Source](https://img.shields.io/badge/LaTeX-Source-orange)](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/paper_latex)
+
+## Artifacts
+
+### Datasets
+
+| Title | Demo | Source Code |
+|-------|------|-------------|
+| [Provenance-Polarity Gate: Multi-Regime Dataset (4 Sources, 1...](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-1/dataset-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/blob/main/round-1/dataset-1/demo/data_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-1/dataset-1/src) |
+
+### Experiments
+
+| Title | Demo | Source Code |
+|-------|------|-------------|
+| [Provenance-Polarity Gate: Multi-Hop Deductive Reasoning Expe...](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-1/experiment-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/blob/main/round-1/experiment-1/demo/method_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-1/experiment-1/src) |
+
+### Evaluations
+
+| Title | Demo | Source Code |
+|-------|------|-------------|
+| [Provenance-Polarity Gate: HPR Reduction and Multi-Hop Accura...](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-1/evaluation-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/blob/main/round-1/evaluation-1/demo/eval_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-1/evaluation-1/src) |
+| [Provenance-Polarity Gate: Honest Evaluation with Power Analy...](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-2/evaluation-1) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/blob/main/round-2/evaluation-1/demo/eval_code_demo.ipynb) | [![Source Code](https://img.shields.io/badge/Source_Code-2962FF)](https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f/tree/main/round-2/evaluation-1/src) |
+
+## Repository Structure
+
+Artifacts are grouped by the round of invention that produced them. Each
+artifact has its own folder with source code and a self-contained demo:
+
+```
+.
+├── round-1/                         # One folder per round of invention
+│   ├── experiment-1/
+│   │   ├── README.md                # What this artifact is
+│   │   ├── src/                     # Full workspace from execution
+│   │   │   ├── method.py            # Main implementation
+│   │   │   ├── method_out.json      # Full output data
+│   │   │   └── ...                  # All execution artifacts
+│   │   └── demo/                    # Self-contained demo
+│   │       └── method_code_demo.ipynb # Colab-ready notebook (code + data inlined)
+│   ├── dataset-1/
+│   │   ├── src/
+│   │   └── demo/
+│   └── evaluation-1/
+│       ├── src/
+│       └── demo/
+├── paper.pdf                        # Research paper
+├── paper_latex/                     # LaTeX source files
+└── README.md
+```
+
+## Running Notebooks
+
+### Option 1: Google Colab (Recommended)
+
+Click the "Open in Colab" badges above to run notebooks directly in your browser.
+No installation required!
+
+### Option 2: Local Jupyter
+
+```bash
+# Clone the repo
+git clone https://github.com/AMGrobelnik/ai-invention-6bdeab-provenance-polarity-gating-a-framework-f
+cd ai-invention-6bdeab-provenance-polarity-gating-a-framework-f
+
+# Install dependencies
+pip install jupyter
+
+# Run any artifact's demo notebook
+jupyter notebook <artifact_folder>/demo/
+```
+
+## Source Code
+
+The original source files are in each artifact's `src/` folder.
+These files may have external dependencies - use the demo notebooks for a self-contained experience.
+
+---
+*Generated by AI Inventor Pipeline - Automated Research Generation*

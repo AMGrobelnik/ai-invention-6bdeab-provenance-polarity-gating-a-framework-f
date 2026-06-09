@@ -1,0 +1,112 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arjovsky et~al.(2019)Arjovsky, Bottou, Gulrajani, and
+  Lopez-Paz]{Arjovsky2019}
+Mart{\'i}n Arjovsky, L{\'e}on Bottou, Ishaan Gulrajani, and David Lopez-Paz.
+\newblock Invariant risk minimization.
+\newblock \emph{arXiv preprint arXiv:1907.02893}, 2019.
+
+\bibitem[Li et~al.(2025)Li, Cheng, Liu, Wang, Zeng, and Liu]{Li2025}
+Qingchuan Li, Mingyue Cheng, Zirui Liu, Daoyu Wang, Yuting Zeng, and Tongxuan
+  Liu.
+\newblock From hypothesis to premises: Llm-based backward logical reasoning
+  with selective symbolic translation.
+\newblock In \emph{AAAI Conference on Artificial Intelligence}, 2025.
+\newblock \doi{10.48550/arXiv.2512.03360}.
+
+\bibitem[Manhaeve et~al.(2018)Manhaeve, Dumancic, Kimmig, Demeester, and
+  Raedt]{Manhaeve2018}
+Robin Manhaeve, Sebastijan Dumancic, Angelika Kimmig, Thomas Demeester, and
+  Luc~De Raedt.
+\newblock Deepproblog: Neural probabilistic logic programming.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2018.
+
+\bibitem[Min et~al.(2023)Min, Krishna, Lyu, Lewis, tau Yih, Koh, Iyyer,
+  Zettlemoyer, and Hajishirzi]{Min2023}
+Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen tau Yih, Pang~Wei Koh,
+  Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi.
+\newblock Factscore: Fine-grained atomic evaluation of factual precision in
+  long form text generation.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, 2023.
+\newblock \doi{10.48550/arXiv.2305.14251}.
+
+\bibitem[Olausson et~al.(2023)Olausson, Gu, Lipkin, Zhang, Solar-Lezama,
+  Tenenbaum, and Levy]{Olausson2023}
+Theo~X. Olausson, Alex Gu, Benjamin Lipkin, Cedegao~E. Zhang, Armando
+  Solar-Lezama, Josh Tenenbaum, and Roger Levy.
+\newblock Linc: A neurosymbolic approach for logical reasoning by combining
+  language models with first-order logic provers.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 5153--5176, 2023.
+\newblock \doi{10.18653/v1/2023.emnlp-main.313}.
+
+\bibitem[Pan et~al.(2023)Pan, Albalak, Wang, and Wang]{Pan2023}
+Liangming Pan, Alon Albalak, Xinyi Wang, and William~Yang Wang.
+\newblock Logic-lm: Empowering large language models with symbolic solvers for
+  faithful logical reasoning.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, 2023.
+\newblock \doi{10.48550/arXiv.2305.12295}.
+
+\bibitem[Peters et~al.(2016)Peters, B{\"u}hlmann, and Meinshausen]{Peters2016}
+Jonas Peters, Peter B{\"u}hlmann, and Nicolai Meinshausen.
+\newblock Causal inference by using invariant prediction: Identification and
+  confidence intervals.
+\newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 78\penalty0 (5):\penalty0 947--1012, 2016.
+\newblock \doi{10.1111/rssb.12167}.
+
+\bibitem[Qin et~al.(2025)Qin, Li, Nian, Yu, Zhao, and Ma]{Qin2025}
+Yuehan Qin, Li~Li, Yi~Nian, Xinyan~Velocity Yu, Yue Zhao, and Xuezhe Ma.
+\newblock Don't let it hallucinate: Premise verification via
+  retrieval-augmented logical reasoning.
+\newblock In \emph{Transactions on Machine Learning Research}, 2025.
+\newblock \doi{10.48550/arXiv.2504.06438}.
+
+\bibitem[Sinha et~al.(2019)Sinha, Sodhani, Dong, Pineau, and
+  Hamilton]{Sinha2019}
+Koustuv Sinha, Shagun Sodhani, Jin Dong, Joelle Pineau, and William~L.
+  Hamilton.
+\newblock Clutrr: A diagnostic benchmark for inductive reasoning from text.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 4505--4514, 2019.
+\newblock \doi{10.18653/v1/D19-1458}.
+
+\bibitem[Sun et~al.(2024)Sun, Zhang, Zhang, Yu, Huang, Xu, He, Zhao, and
+  Liu]{Sun2024}
+Wangtao Sun, Chenxiang Zhang, Xueyou Zhang, Xuanqing Yu, Ziyang Huang, Haotian
+  Xu, Shizhu He, Jun Zhao, and Kang Liu.
+\newblock Beyond instruction following: Evaluating inferential rule following
+  of large language models.
+\newblock In \emph{China National Conference on Chinese Computational
+  Linguistics}, pages 408--434, 2024.
+\newblock \doi{10.1007/978-981-95-2725-0_25}.
+
+\bibitem[Wang et~al.(2022)Wang, Wei, Schuurmans, Le, Chi, and Zhou]{Wang2022}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~H. Chi, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and
+  Zhou]{Wei2022}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed~H. Chi, Fei Xia,
+  Quoc Le, and Denny Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
+
+\bibitem[Xu et~al.(2024)Xu, Fei, Pan, Liu, Lee, and Hsu]{Liu2024}
+Jundong Xu, Hao Fei, Liangming Pan, Qian Liu, Mong~Li Lee, and W.~Hsu.
+\newblock Faithful logical reasoning via symbolic chain-of-thought.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, pages 13326--13365, 2024.
+\newblock \doi{10.48550/arXiv.2405.18357}.
+
+\end{thebibliography}
