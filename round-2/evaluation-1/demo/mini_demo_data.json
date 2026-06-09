@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "method_name": "Provenance-Polarity Gate (PPG)",
+    "model": "google/gemma-4-26b-a4b-it",
+    "k_endorsements": 3,
+    "diff_high_threshold": 0.4,
+    "diff_low_threshold": 0.25,
+    "description": "PPG filters extracted premises via a 3-axis endorsement stability battery (document-presence, entity-renaming, query-counterfactual). Each premise's endorsement fingerprint must match its declared provenance class (A=doc-extensional, B=world-knowledge, C=stipulated). Admitted premises feed a Python backward-chaining reasoner.",
+    "phase0_preflight": {
+      "go_nogo": true,
+      "axis_separability": {
+        "H_stat": 27.363636363636367,
+        "p_value": 1.1430411388344114e-06
+      },
+      "type_A_mean_endorsement": 0.95,
+      "type_B_mean_endorsement": 1.0,
+      "bait_mean_endorsement": 0.0,
+      "n_A": 10,
+      "n_B": 10,
+      "n_bait": 10
+    },
+    "phase1_pilot": {
+      "baseline_halluc_rate": 0.075,
+      "per_instance_rates": [
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "n_instances": 10
+    },
+    "kinship_metrics": {
+      "n_instances": 15,
+      "accuracy_raw_cot": 1.0,
+      "accuracy_self_consistency": 1.0,
+      "accuracy_logic_lm_no_gate": 0.6,
+      "accuracy_ppg": 0.06666666666666667,
+      "halluc_rate_logic_lm": 0.08333333333333333,
+      "halluc_rate_ppg_admitted": 0.06666666666666667,
+      "avg_premises_extracted": 4.266666666666667,
+      "avg_premises_admitted": 0.2,
+      "gate_stats": {
+        "halluc_rate_before_gate": 0.08333333333333333,
+        "halluc_rate_after_gate": 0.06666666666666667,
+        "halluc_reduction": 0.016666666666666663,
+        "gate_precision_proxy": 0.9333333333333333
+      },
+      "by_hops": {
+        "2": {
+          "n": 8,
+          "accuracy_cot": 1.0,
+          "accuracy_ppg": 0.125,
+          "halluc_rate_ppg": 0.125
+        },
+        "3": {
+          "n": 7,
+          "accuracy_cot": 1.0,
+          "accuracy_ppg": 0.0,
+          "halluc_rate_ppg": 0.0
+        }
+      }
+    },
+    "stipulated_metrics": {
+      "n_instances": 5,
+      "accuracy_raw_cot": 1.0,
+      "accuracy_self_consistency": 1.0,
+      "accuracy_logic_lm_no_gate": 0.0,
+      "accuracy_ppg": 0.0,
+      "halluc_rate_logic_lm": 0.6,
+      "halluc_rate_ppg_admitted": 0.8333333333333334,
+      "avg_premises_extracted": 5.0,
+      "avg_premises_admitted": 1.8,
+      "gate_stats": {
+        "halluc_rate_before_gate": 0.6,
+        "halluc_rate_after_gate": 0.8333333333333334,
+        "halluc_reduction": -0.2333333333333334,
+        "gate_precision_proxy": 0.16666666666666663
+      },
+      "by_hops": {
+        "2": {
+          "n": 5,
+          "accuracy_cot": 1.0,
+          "accuracy_ppg": 0.0,
+          "halluc_rate_ppg": 0.8333333333333334
+        }
+      }
+    },
+    "api_cost_tracker": {
+      "calls": 2089,
+      "tokens_in": 195901,
+      "tokens_out": 18943,
+      "usd": 0.0,
+      "errors": 0
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "kinship_synthetic",
+      "examples": [
+        {
+          "input": "Document: Henry is Bob's mother. Bob is Grace's mother.\n\nQuery: What is Henry's relationship to Grace?",
+          "output": "grandparent",
+          "predict_raw_cot": "henry is grace's grandmother",
+          "predict_self_consistency_cot": "henry is grace's grandparent",
+          "predict_logic_lm_no_gate": "grandmother",
+          "predict_ppg": "unknown",
+          "metadata_hops": 2,
+          "metadata_instance_id": "kinship_042",
+          "metadata_entity_a": "Henry",
+          "metadata_entity_b": "Grace",
+          "metadata_correct_raw_cot": true,
+          "metadata_correct_self_consistency": true,
+          "metadata_correct_logic_lm": true,
+          "metadata_correct_ppg": false,
+          "metadata_halluc_rate_logic_lm": 0.25,
+          "metadata_halluc_rate_ppg_raw": 0.0,
+          "metadata_halluc_rate_ppg_admitted": 0.0,
+          "metadata_n_premises_extracted": 3,
+          "metadata_n_admitted": 0,
+          "metadata_n_rejected": 3
+        },
+        {
+          "input": "Document: Frank is Jake's mother. Jake is Karl's mother.\n\nQuery: What is Frank's relationship to Karl?",
+          "output": "grandparent",
+          "predict_raw_cot": "frank is karl's grandmother",
+          "predict_self_consistency_cot": "frank is karl's grandparent",
+          "predict_logic_lm_no_gate": "frank is karl's grandmother",
+          "predict_ppg": "unknown",
+          "metadata_hops": 2,
+          "metadata_instance_id": "kinship_049",
+          "metadata_entity_a": "Frank",
+          "metadata_entity_b": "Karl",
+          "metadata_correct_raw_cot": true,
+          "metadata_correct_self_consistency": true,
+          "metadata_correct_logic_lm": true,
+          "metadata_correct_ppg": false,
+          "metadata_halluc_rate_logic_lm": 0.0,
+          "metadata_halluc_rate_ppg_raw": 0.25,
+          "metadata_halluc_rate_ppg_admitted": 0.0,
+          "metadata_n_premises_extracted": 4,
+          "metadata_n_admitted": 0,
+          "metadata_n_rejected": 4
+        },
+        {
+          "input": "Document: Bob is Leo's mother. Leo is Eve's mother.\n\nQuery: What is Bob's relationship to Eve?",
+          "output": "grandparent",
+          "predict_raw_cot": "bob is eve's grandmother",
+          "predict_self_consistency_cot": "bob is eve's grandparent",
+          "predict_logic_lm_no_gate": "grandmother",
+          "predict_ppg": "unknown",
+          "metadata_hops": 2,
+          "metadata_instance_id": "kinship_056",
+          "metadata_entity_a": "Bob",
+          "metadata_entity_b": "Eve",
+          "metadata_correct_raw_cot": true,
+          "metadata_correct_self_consistency": true,
+          "metadata_correct_logic_lm": true,
+          "metadata_correct_ppg": false,
+          "metadata_halluc_rate_logic_lm": 0.25,
+          "metadata_halluc_rate_ppg_raw": 0.25,
+          "metadata_halluc_rate_ppg_admitted": 0.0,
+          "metadata_n_premises_extracted": 4,
+          "metadata_n_admitted": 0,
+          "metadata_n_rejected": 4
+        }
+      ]
+    },
+    {
+      "dataset": "stipulated_synthetic",
+      "examples": [
+        {
+          "input": "Document: In the Land of Vorn, a glomp's frobble is defined as its sibling's eldest offspring. Ivan is a glomp. Leo is Ivan's sibling. Julia is Leo's child. Hannah is also Ivan's sibling.\n\nQuery: What is Ivan's frobble?",
+          "output": "Julia",
+          "predict_raw_cot": "julia",
+          "predict_self_consistency_cot": "julia",
+          "predict_logic_lm_no_gate": "the provided premises do not contain enough information to determine ivan's frobble",
+          "predict_ppg": "the provided premises do not contain enough information to determine ivan's frobble",
+          "metadata_hops": 2,
+          "metadata_instance_id": "stipulated_000",
+          "metadata_entity_a": "Ivan",
+          "metadata_entity_b": "Julia",
+          "metadata_correct_raw_cot": true,
+          "metadata_correct_self_consistency": true,
+          "metadata_correct_logic_lm": false,
+          "metadata_correct_ppg": false,
+          "metadata_halluc_rate_logic_lm": 0.6,
+          "metadata_halluc_rate_ppg_raw": 0.6,
+          "metadata_halluc_rate_ppg_admitted": 0.5,
+          "metadata_n_premises_extracted": 5,
+          "metadata_n_admitted": 2,
+          "metadata_n_rejected": 3
+        },
+        {
+          "input": "Document: In the Land of Vorn, a zibble's wumble is defined as its sibling's eldest offspring. Karl is a zibble. Julia is Karl's sibling. Alice is Julia's child. Jake is also Karl's sibling.\n\nQuery: What is Karl's wumble?",
+          "output": "Alice",
+          "predict_raw_cot": "however, looking at the prompt's constraints: \"step by step based only on what is stated.\" the text does not state alice is the eldest. it also does not state jake has children. therefore, based strictly on the text provided,",
+          "predict_self_consistency_cot": "however, looking at the prompt's constraints: \"step by step based only on what is stated.\" the text does not state alice is the eldest. it also does not state jake has children. therefore, based strictly on the text provided,",
+          "predict_logic_lm_no_gate": "the provided premises do not contain enough information to determine karl's wumble",
+          "predict_ppg": "the provided premises do not contain enough information to determine karl's wumble",
+          "metadata_hops": 2,
+          "metadata_instance_id": "stipulated_001",
+          "metadata_entity_a": "Karl",
+          "metadata_entity_b": "Alice",
+          "metadata_correct_raw_cot": true,
+          "metadata_correct_self_consistency": true,
+          "metadata_correct_logic_lm": false,
+          "metadata_correct_ppg": false,
+          "metadata_halluc_rate_logic_lm": 0.6,
+          "metadata_halluc_rate_ppg_raw": 0.6,
+          "metadata_halluc_rate_ppg_admitted": 1.0,
+          "metadata_n_premises_extracted": 5,
+          "metadata_n_admitted": 1,
+          "metadata_n_rejected": 4
+        }
+      ]
+    }
+  ]
+}

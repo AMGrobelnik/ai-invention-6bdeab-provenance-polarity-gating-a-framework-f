@@ -1,0 +1,16 @@
+{
+  "kind": "code_demo",
+  "id": "art_AIvDMDsUwjrd",
+  "name": "gen_art_dataset_1",
+  "type": "code",
+  "iteration": 1,
+  "title": "Provenance-Polarity Gate: Multi-Regime Dataset (4 Sources, 1995 Rows)",
+  "summary": "This artifact prepares a 1,995-row multi-regime dataset for the Provenance-Polarity Gate experiment, standardized to the exp_sel_data_out JSON schema. Four datasets were selected and processed:\n\n1. **CLUTRR/v1** (495 examples, `universal_rule` regime): Kinship-chain stories where entity facts are document-extensional and kinship axioms are world-knowledge-universal. Includes gold proof chains (`metadata_gold_premises`), hop depth (1\u20138), and relation type (`metadata_f_comb`). Sourced from `kendrivp/CLUTRR_v1_extracted` (HuggingFace mirror of EMNLP 2019 benchmark). Stratified sample across task_name hop-depth buckets.\n\n2. **hitachi-nlp/proofwriter_processed_OWA** (500 examples, `universal_rule` regime): Logical inference over theory+question pairs where rules are explicitly stated inside the document, making them document-stipulated bridging premises. Pre-split by OWA depth 0\u20133 (125 per depth). Includes gold proof trees (`metadata_proof_tree`). Best dataset for testing whether the model identifies rules from the document versus world knowledge.\n\n3. **nguyen-brat/entailment_bank** (500 examples, `universal_rule` regime): Science QA requiring world-knowledge bridging rules with no context document in the input. Gold chain-of-thought proofs (`metadata_proof`) provide step-by-step entailment chains. Tests pure world-knowledge rule retrieval.\n\n4. **lighteval/synthetic_reasoning_natural (hard)** (500 examples, `document_stipulated` regime): Synthetic if-then rule chains embedded directly in the input text. Rules are unambiguously document-stipulated. Clean, single-hop, no noise \u2014 ideal for the baseline/easy tier of the polarity gate.\n\nAll rows validated against the exp_sel_data_out schema. Output: `full_data_out.json` (1.9 MB), `mini_data_out.json` (12 examples), `preview_data_out.json` (12 examples, strings truncated to 200 chars). All files well under 100 MB. Reproducible via `data.py` with seed=42.",
+  "original_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_F2qZ-AstDznG/3_invention_loop/iter_1/gen_art/gen_art_dataset_1",
+  "demo_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_F2qZ-AstDznG/4_gen_paper_repo/_3_gen_art_demo/iter_1/art_AIvDMDsUwjrd",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_F2qZ-AstDznG/4_gen_paper_repo/_3_gen_art_demo/iter_1/art_AIvDMDsUwjrd/data_code_demo.ipynb"
+}

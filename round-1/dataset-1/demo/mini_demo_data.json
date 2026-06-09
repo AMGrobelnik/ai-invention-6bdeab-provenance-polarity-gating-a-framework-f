@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "dataset": "CLUTRR/v1",
+      "examples": [
+        {
+          "input": "Story: [Robert] love his brother [Ryan]. They are always playing together. [Michael] loves to play baseball with his dad, [Robert]. [April] took her nephew [Michael] to the park to play soccer.\nQuery: What is the relationship between ('Ryan', 'April')?",
+          "output": "sister",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "CLUTRR/v1",
+          "metadata_hop_depth": 3,
+          "metadata_f_comb": "brother-son-aunt",
+          "metadata_gold_premises": "[{('Ryan', 'sister', 'April'): [('Ryan', 'brother', 'Robert'), ('Robert', 'sister', 'April')]}, {('Robert', 'sister', 'April'): [('Robert', 'son', 'Michael'), ('Michael', 'aunt', 'April')]}]",
+          "metadata_task_name": "task_2.3"
+        },
+        {
+          "input": "Story: [Maria] and her son, [Jeffery], went to the park, and had a wonderful time. [Jeffery] bought gifts for his lovely sister, [Leslie] [Leslie] went to her father [James] Birthday party [Elizabeth] gave birth to a son named [James]. [Manuel] felt lonely when his wife [Alice] was gone to see her mother [Elizabeth]. [Manuel] took his daughter [Kim] to the park. [Mary], Emilie´s sister went with them.\nQuery: What is the relationship between ('Maria', 'Mary')?",
+          "output": "niece",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "CLUTRR/v1",
+          "metadata_hop_depth": 8,
+          "metadata_f_comb": "son-sister-father-mother-daughter-husband-daughter-sister",
+          "metadata_gold_premises": "[{('Maria', 'niece', 'Mary'): [('Maria', 'sister', 'Alice'), ('Alice', 'daughter', 'Mary')]}, {('Maria', 'sister', 'Alice'): [('Maria', 'son', 'Jeffery'), ('Jeffery', 'aunt', 'Alice')]}, {('Alice', 'daughter', 'Mary'): [('Alice', 'daughter', 'Kim'), ('Kim', 'sister', 'Mary')]}, {('Jeffery', 'aunt', 'Alice'): [('Jeffery', 'father', 'James'), ('James', 'sister', 'Alice')]}, {('Alice', 'daughter', 'Kim'): [('Alice', 'husband', 'Manuel'), ('Manuel', 'daughter', 'Kim')]}, {('Jeffery', 'father', 'James'): [('Jeffery', 'sister', 'Leslie'), ('Leslie', 'father', 'James')]}, {('James', 'sister', 'Alice'): [('James', 'mother', 'Elizabeth'), ('Elizabeth', 'daughter', 'Alice')]}]",
+          "metadata_task_name": "task_1.8"
+        },
+        {
+          "input": "Story: [Sean] is a sibling of [Leo]. [Kenneth] took his brother [Leo] to get lunch at a local diner.\nQuery: What is the relationship between ('Sean', 'Kenneth')?",
+          "output": "brother",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "CLUTRR/v1",
+          "metadata_hop_depth": 2,
+          "metadata_f_comb": "brother-brother",
+          "metadata_gold_premises": "[{('Sean', 'brother', 'Kenneth'): [('Sean', 'brother', 'Leo'), ('Leo', 'brother', 'Kenneth')]}]",
+          "metadata_task_name": "task_4.2"
+        }
+      ]
+    },
+    {
+      "dataset": "hitachi-nlp/proofwriter_processed_OWA",
+      "examples": [
+        {
+          "input": "Theory:\nCharlie is nice. Erin is white. If something is nice then it is green.\n\nQuestion: Charlie is nice.",
+          "output": "True",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "hitachi-nlp/proofwriter_processed_OWA",
+          "metadata_hop_depth": 1,
+          "metadata_proof_tree": "@0: Charlie is nice.[(triple1)] Erin is white.[(triple2)] @1: Charlie is green.[(((triple1) -> rule1))]"
+        },
+        {
+          "input": "Theory:\nGary is big. Gary is cold. Gary is not green. Gary is quiet. Gary is red. Gary is rough. Gary is white. Quiet, big people are white. Green people are white. All green people are cold.\n\nQuestion: Gary is not green.",
+          "output": "True",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "hitachi-nlp/proofwriter_processed_OWA",
+          "metadata_hop_depth": 0,
+          "metadata_proof_tree": "@0: Gary is big.[(triple1)] Gary is cold.[(triple2)] Gary is not green.[(triple3)] Gary is quiet.[(triple4)] Gary is red.[(triple5)] Gary is rough.[(triple6)] Gary is white.[(triple7 OR ((triple4 triple1) -> rule1))]"
+        },
+        {
+          "input": "Theory:\nErin is blue. Erin is not green. Erin is quiet. Erin is round. Fiona is not green. Fiona is nice. Fiona is quiet. Fiona is red. Fiona is young. Gary is blue. Gary is green. Gary is nice. Gary is not quiet. Gary is round. Gary is young. If Fiona is nice and Fiona is green then Fiona is young. All green, round things are red.\n\nQuestion: Fiona is red.",
+          "output": "True",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "hitachi-nlp/proofwriter_processed_OWA",
+          "metadata_hop_depth": 1,
+          "metadata_proof_tree": "@0: Erin is blue.[(triple1)] Erin is not green.[(triple2)] Erin is quiet.[(triple3)] Erin is round.[(triple4)] Fiona is nice.[(triple6)] Fiona is not green.[(triple5)] Fiona is quiet.[(triple7)] Fiona is red.[(triple8)] Fiona is young.[(triple9)] Gary is blue.[(triple10)] Gary is green.[(triple11)] Gary is nice.[(triple12)] Gary is not quiet.[(triple13)] Gary is round.[(triple14)] Gary is young.[(triple15)] @1: Gary is red.[(((triple11 triple14) -> rule2))]"
+        }
+      ]
+    },
+    {
+      "dataset": "nguyen-brat/entailment_bank",
+      "examples": [
+        {
+          "input": "Question: Which statement describes how muscles work to allow a person to extend an arm from a curled position by straightening the elbow?",
+          "output": "The triceps contract and the biceps relax.",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "nguyen-brat/entailment_bank",
+          "metadata_proof": "A tricep is a kind of muscle.\nContracting is a kind of movement.\nTherefore, a tricep contracting is a kind of muscular movement.\nRelaxing is a kind of movement.\nA bicep is a kind of muscle.\nTherefore, a bicep relaxing is a kind of muscular movement.\nA tricep contracting is a kind of muscular movement.\nA bicep relaxing is a kind of muscular movement.\nTherefore, a tricep contracting and a bicep relaxing are kinds of muscular movement.\nA tricep contracting and a bicep relaxing are kinds of muscular movement.\nMuscular movement helps animals move.\nTherefore, a tricep contracting and a bicep relaxing helps animals move.\nA tricep contracting and a bicep relaxing helps animals move.\nStraightening is a kind of movement.\nTherefore, a tricep contracting and a bicep relaxing helps animals straighten.\nBiceps are part of an arm.\nTriceps are part of an arm.\nTherefore, triceps and biceps are part of an arm.\nTriceps and biceps are part of an arm.\nThe elbow is part of an arm.\nTherefore, triceps and biceps and the elbow are part of an arm.\nTriceps and biceps and the elbow are part of an arm.\nRelaxing is a kind of movement0.\nTherefore, triceps and biceps are connected to the elbow.\nA tricep contracting and a bicep relaxing helps animals straighten.\nTriceps and biceps are connected to the elbow.\nTherefore, triceps contracting / biceps relaxing causes a person's elbow to straighten."
+        },
+        {
+          "input": "Question: Frame construction predominates in the New England area due to the abundance of",
+          "output": "wood.",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "nguyen-brat/entailment_bank",
+          "metadata_proof": "Wood is a kind of resource.\nFrame construction requires wood.\nTherefore, wood is a kind of resource that is required for frame construction.\nFrame construction is a kind of industry.\nIf an industry requires a resource then that industry predominates in areas with an abundance of that resource.\nTherefore, if frame construction requires a resource then frame construction predominates in areas with an abundance of that resource.\nWood is a kind of resource that is required for frame construction.\nIf frame construction requires a resource then frame construction predominates in areas with an abundance of that resource.\nTherefore, frame construction predominates in areas with an abundance of wood.\nNew england has an abundance of trees.\nA tree contains wood.\nTherefore, new england has an abundance of wood.\nFrame construction predominates in areas with an abundance of wood.\nNew england has an abundance of wood.\nTherefore, frame construction predominates in the new england area because that area has an abundance of wood."
+        },
+        {
+          "input": "Question: Which of these groups animals are ALL mammals?",
+          "output": "mouse, monkey, bat",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "nguyen-brat/entailment_bank",
+          "metadata_proof": "Mammals give birth to live young.\nMonkeys give birth to live young.\nTherefore, a monkey is a kind of mammal.\nMammals give birth to live young.\nBats give birth to live young.\nTherefore, a bat is a kind of mammal.\nMammals give birth to live young.\nMice give birth to live young.\nTherefore, a mouse is a kind of mammal.\nA monkey is a kind of mammal.\nA bat is a kind of mammal.\nA mouse is a kind of mammal.\nTherefore, mouse, monkey, and bat are all mammals."
+        }
+      ]
+    },
+    {
+      "dataset": "lighteval/synthetic_reasoning_natural",
+      "examples": [
+        {
+          "input": "If Dan is red, then Dan is slow.\nIf Dan is scary, then Dan is beautiful.\nIf Dan is good, then Dan is happy.\nIf person is purple or boring, then person is hot.\nIf person is blue or smart, then person is young.\nFact:\nDan is giant and cobalt.\nThe following can be determined about Dan:",
+          "output": "Dan is young.",
+          "metadata_regime": "document_stipulated",
+          "metadata_source_dataset": "lighteval/synthetic_reasoning_natural"
+        },
+        {
+          "input": "If a cow is small or smart, then the cow is beautiful.\nIf a cow is red or purple, then the cow is fast.\nIf an animal is bad, then the animal is good.\nIf an animal is scary, then the animal is hot.\nIf a cow is blue, then the cow is big.\nFact:\nThe cow is purple and antique.\nThe following can be determined about the cow:",
+          "output": "The cow is fast.",
+          "metadata_regime": "document_stipulated",
+          "metadata_source_dataset": "lighteval/synthetic_reasoning_natural"
+        },
+        {
+          "input": "If person is beautiful or hot, then person is clean.\nIf person is soft or young, then person is blue.\nIf person is boring and strong, then person is cold.\nIf Carol is sad, then Carol is smart.\nIf Carol is green, then Carol is old.\nFact:\nCarol is young and intelligent.\nThe following can be determined about Carol:",
+          "output": "Carol is blue.",
+          "metadata_regime": "document_stipulated",
+          "metadata_source_dataset": "lighteval/synthetic_reasoning_natural"
+        }
+      ]
+    }
+  ]
+}
