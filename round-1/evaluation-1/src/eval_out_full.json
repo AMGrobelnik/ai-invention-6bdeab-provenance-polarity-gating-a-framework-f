@@ -1,0 +1,1052 @@
+{
+  "primary_hpr_test": {
+    "gate_hpr": 0.115141,
+    "baseline_hpr": 0.359927,
+    "n_premises_evaluated": 1103,
+    "z": -13.5079,
+    "p": 0.0,
+    "cohen_h": 0.5945,
+    "ci_95_gate_hpr": [
+      0.0976,
+      0.1353
+    ],
+    "gate_absolute_reduction": 0.2448,
+    "gar_ci_95": [
+      0.2108,
+      0.2788
+    ],
+    "power": 1.0,
+    "mde": 0.1193,
+    "required_n_for_80pct_power": 49.8,
+    "underpowered": false
+  },
+  "accuracy_by_condition": [
+    {
+      "condition": "gate",
+      "n": 250,
+      "accuracy": 0.696,
+      "ci_95": [
+        0.636,
+        0.752
+      ],
+      "mcnemar_p": null,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": null,
+      "cohen_d_vs_gate": 0.0,
+      "odds_ratio_vs_gate": 1.0
+    },
+    {
+      "condition": "no_gate",
+      "n": 250,
+      "accuracy": 0.472,
+      "ci_95": [
+        0.412,
+        0.532
+      ],
+      "mcnemar_p": 5.1e-07,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": true,
+      "cohen_d_vs_gate": 0.4545,
+      "odds_ratio_vs_gate": 2.5611
+    },
+    {
+      "condition": "CoT",
+      "n": 250,
+      "accuracy": 0.484,
+      "ci_95": [
+        0.424,
+        0.548
+      ],
+      "mcnemar_p": 1.371e-05,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": true,
+      "cohen_d_vs_gate": 0.431,
+      "odds_ratio_vs_gate": 2.4408
+    },
+    {
+      "condition": "self_consistency_CoT",
+      "n": 250,
+      "accuracy": 0.628,
+      "ci_95": [
+        0.568,
+        0.688
+      ],
+      "mcnemar_p": 0.12191669,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": false,
+      "cohen_d_vs_gate": 0.1438,
+      "odds_ratio_vs_gate": 1.3562
+    },
+    {
+      "condition": "Logic_LM",
+      "n": 250,
+      "accuracy": 0.576,
+      "ci_95": [
+        0.516,
+        0.636
+      ],
+      "mcnemar_p": 0.00569156,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": true,
+      "cohen_d_vs_gate": 0.2494,
+      "odds_ratio_vs_gate": 1.6853
+    },
+    {
+      "condition": "LINC",
+      "n": 250,
+      "accuracy": 0.6,
+      "ci_95": [
+        0.54,
+        0.66
+      ],
+      "mcnemar_p": 0.02830998,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": false,
+      "cohen_d_vs_gate": 0.201,
+      "odds_ratio_vs_gate": 1.5263
+    },
+    {
+      "condition": "SymbCoT",
+      "n": 250,
+      "accuracy": 0.604,
+      "ci_95": [
+        0.544,
+        0.664
+      ],
+      "mcnemar_p": 0.0350987,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": false,
+      "cohen_d_vs_gate": 0.1929,
+      "odds_ratio_vs_gate": 1.501
+    },
+    {
+      "condition": "HBLR",
+      "n": 250,
+      "accuracy": 0.652,
+      "ci_95": [
+        0.592,
+        0.712
+      ],
+      "mcnemar_p": 0.32911399,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": false,
+      "cohen_d_vs_gate": 0.0939,
+      "odds_ratio_vs_gate": 1.222
+    },
+    {
+      "condition": "span_retrieval",
+      "n": 250,
+      "accuracy": 0.652,
+      "ci_95": [
+        0.592,
+        0.708
+      ],
+      "mcnemar_p": 0.30994085,
+      "bonferroni_alpha": 0.00625,
+      "bonferroni_reject": false,
+      "cohen_d_vs_gate": 0.0939,
+      "odds_ratio_vs_gate": 1.222
+    }
+  ],
+  "per_axis_pr": {
+    "DP": {
+      "axis_doc": {
+        "precision": 0.8943,
+        "recall": 0.8707,
+        "f1": 0.8824,
+        "TP": 330,
+        "FP": 39,
+        "FN": 49,
+        "TN": 340
+      },
+      "axis_ent": {
+        "precision": 0.7086,
+        "recall": 0.6544,
+        "f1": 0.6804,
+        "TP": 248,
+        "FP": 102,
+        "FN": 131,
+        "TN": 277
+      },
+      "axis_qry": {
+        "precision": 0.6835,
+        "recall": 0.6438,
+        "f1": 0.663,
+        "TP": 244,
+        "FP": 113,
+        "FN": 135,
+        "TN": 266
+      }
+    },
+    "ST": {
+      "axis_doc": {
+        "precision": 0.729,
+        "recall": 0.6536,
+        "f1": 0.6892,
+        "TP": 234,
+        "FP": 87,
+        "FN": 124,
+        "TN": 271
+      },
+      "axis_ent": {
+        "precision": 0.8617,
+        "recall": 0.8352,
+        "f1": 0.8482,
+        "TP": 299,
+        "FP": 48,
+        "FN": 59,
+        "TN": 310
+      },
+      "axis_qry": {
+        "precision": 0.6075,
+        "recall": 0.5447,
+        "f1": 0.5744,
+        "TP": 195,
+        "FP": 126,
+        "FN": 163,
+        "TN": 232
+      }
+    },
+    "AC": {
+      "axis_doc": {
+        "precision": 0.676,
+        "recall": 0.5929,
+        "f1": 0.6317,
+        "TP": 217,
+        "FP": 104,
+        "FN": 149,
+        "TN": 262
+      },
+      "axis_ent": {
+        "precision": 0.5797,
+        "recall": 0.5464,
+        "f1": 0.5626,
+        "TP": 200,
+        "FP": 145,
+        "FN": 166,
+        "TN": 221
+      },
+      "axis_qry": {
+        "precision": 0.8732,
+        "recall": 0.8087,
+        "f1": 0.8397,
+        "TP": 296,
+        "FP": 43,
+        "FN": 70,
+        "TN": 323
+      }
+    }
+  },
+  "per_axis_pr_by_dataset": {
+    "CLUTRR": {
+      "DP": {
+        "axis_doc": {
+          "precision": 0.8728,
+          "recall": 0.8728,
+          "f1": 0.8728,
+          "TP": 199,
+          "FP": 29,
+          "FN": 29,
+          "TN": 199
+        },
+        "axis_ent": {
+          "precision": 0.7095,
+          "recall": 0.6535,
+          "f1": 0.6804,
+          "TP": 149,
+          "FP": 61,
+          "FN": 79,
+          "TN": 167
+        },
+        "axis_qry": {
+          "precision": 0.6762,
+          "recall": 0.6228,
+          "f1": 0.6484,
+          "TP": 142,
+          "FP": 68,
+          "FN": 86,
+          "TN": 160
+        }
+      },
+      "ST": {
+        "axis_doc": {
+          "precision": 0.7403,
+          "recall": 0.6442,
+          "f1": 0.6889,
+          "TP": 134,
+          "FP": 47,
+          "FN": 74,
+          "TN": 161
+        },
+        "axis_ent": {
+          "precision": 0.8557,
+          "recall": 0.8269,
+          "f1": 0.8411,
+          "TP": 172,
+          "FP": 29,
+          "FN": 36,
+          "TN": 179
+        },
+        "axis_qry": {
+          "precision": 0.612,
+          "recall": 0.5385,
+          "f1": 0.5729,
+          "TP": 112,
+          "FP": 71,
+          "FN": 96,
+          "TN": 137
+        }
+      },
+      "AC": {
+        "axis_doc": {
+          "precision": 0.6733,
+          "recall": 0.6071,
+          "f1": 0.6385,
+          "TP": 136,
+          "FP": 66,
+          "FN": 88,
+          "TN": 158
+        },
+        "axis_ent": {
+          "precision": 0.5616,
+          "recall": 0.5089,
+          "f1": 0.534,
+          "TP": 114,
+          "FP": 89,
+          "FN": 110,
+          "TN": 135
+        },
+        "axis_qry": {
+          "precision": 0.8476,
+          "recall": 0.7946,
+          "f1": 0.8203,
+          "TP": 178,
+          "FP": 32,
+          "FN": 46,
+          "TN": 192
+        }
+      }
+    },
+    "ProofWriter": {
+      "DP": {
+        "axis_doc": {
+          "precision": 0.9178,
+          "recall": 0.8816,
+          "f1": 0.8993,
+          "TP": 67,
+          "FP": 6,
+          "FN": 9,
+          "TN": 70
+        },
+        "axis_ent": {
+          "precision": 0.6986,
+          "recall": 0.6711,
+          "f1": 0.6846,
+          "TP": 51,
+          "FP": 22,
+          "FN": 25,
+          "TN": 54
+        },
+        "axis_qry": {
+          "precision": 0.675,
+          "recall": 0.7105,
+          "f1": 0.6923,
+          "TP": 54,
+          "FP": 26,
+          "FN": 22,
+          "TN": 50
+        }
+      },
+      "ST": {
+        "axis_doc": {
+          "precision": 0.7164,
+          "recall": 0.6234,
+          "f1": 0.6667,
+          "TP": 48,
+          "FP": 19,
+          "FN": 29,
+          "TN": 58
+        },
+        "axis_ent": {
+          "precision": 0.8904,
+          "recall": 0.8442,
+          "f1": 0.8667,
+          "TP": 65,
+          "FP": 8,
+          "FN": 12,
+          "TN": 69
+        },
+        "axis_qry": {
+          "precision": 0.625,
+          "recall": 0.5195,
+          "f1": 0.5674,
+          "TP": 40,
+          "FP": 24,
+          "FN": 37,
+          "TN": 53
+        }
+      },
+      "AC": {
+        "axis_doc": {
+          "precision": 0.6949,
+          "recall": 0.5395,
+          "f1": 0.6074,
+          "TP": 41,
+          "FP": 18,
+          "FN": 35,
+          "TN": 58
+        },
+        "axis_ent": {
+          "precision": 0.68,
+          "recall": 0.6711,
+          "f1": 0.6755,
+          "TP": 51,
+          "FP": 24,
+          "FN": 25,
+          "TN": 52
+        },
+        "axis_qry": {
+          "precision": 0.8971,
+          "recall": 0.8026,
+          "f1": 0.8472,
+          "TP": 61,
+          "FP": 7,
+          "FN": 15,
+          "TN": 69
+        }
+      }
+    },
+    "micro_ontology": {
+      "DP": {
+        "axis_doc": {
+          "precision": 0.925,
+          "recall": 0.8605,
+          "f1": 0.8916,
+          "TP": 37,
+          "FP": 3,
+          "FN": 6,
+          "TN": 40
+        },
+        "axis_ent": {
+          "precision": 0.7143,
+          "recall": 0.5814,
+          "f1": 0.641,
+          "TP": 25,
+          "FP": 10,
+          "FN": 18,
+          "TN": 33
+        },
+        "axis_qry": {
+          "precision": 0.641,
+          "recall": 0.5814,
+          "f1": 0.6098,
+          "TP": 25,
+          "FP": 14,
+          "FN": 18,
+          "TN": 29
+        }
+      },
+      "ST": {
+        "axis_doc": {
+          "precision": 0.725,
+          "recall": 0.725,
+          "f1": 0.725,
+          "TP": 29,
+          "FP": 11,
+          "FN": 11,
+          "TN": 29
+        },
+        "axis_ent": {
+          "precision": 0.8095,
+          "recall": 0.85,
+          "f1": 0.8293,
+          "TP": 34,
+          "FP": 8,
+          "FN": 6,
+          "TN": 32
+        },
+        "axis_qry": {
+          "precision": 0.5455,
+          "recall": 0.6,
+          "f1": 0.5714,
+          "TP": 24,
+          "FP": 20,
+          "FN": 16,
+          "TN": 20
+        }
+      },
+      "AC": {
+        "axis_doc": {
+          "precision": 0.6977,
+          "recall": 0.6818,
+          "f1": 0.6897,
+          "TP": 30,
+          "FP": 13,
+          "FN": 14,
+          "TN": 31
+        },
+        "axis_ent": {
+          "precision": 0.5217,
+          "recall": 0.5455,
+          "f1": 0.5333,
+          "TP": 24,
+          "FP": 22,
+          "FN": 20,
+          "TN": 22
+        },
+        "axis_qry": {
+          "precision": 0.9048,
+          "recall": 0.8636,
+          "f1": 0.8837,
+          "TP": 38,
+          "FP": 4,
+          "FN": 6,
+          "TN": 40
+        }
+      }
+    },
+    "contract": {
+      "DP": {
+        "axis_doc": {
+          "precision": 0.9643,
+          "recall": 0.8438,
+          "f1": 0.9,
+          "TP": 27,
+          "FP": 1,
+          "FN": 5,
+          "TN": 31
+        },
+        "axis_ent": {
+          "precision": 0.7188,
+          "recall": 0.7188,
+          "f1": 0.7188,
+          "TP": 23,
+          "FP": 9,
+          "FN": 9,
+          "TN": 23
+        },
+        "axis_qry": {
+          "precision": 0.8214,
+          "recall": 0.7188,
+          "f1": 0.7667,
+          "TP": 23,
+          "FP": 5,
+          "FN": 9,
+          "TN": 27
+        }
+      },
+      "ST": {
+        "axis_doc": {
+          "precision": 0.697,
+          "recall": 0.697,
+          "f1": 0.697,
+          "TP": 23,
+          "FP": 10,
+          "FN": 10,
+          "TN": 23
+        },
+        "axis_ent": {
+          "precision": 0.9032,
+          "recall": 0.8485,
+          "f1": 0.875,
+          "TP": 28,
+          "FP": 3,
+          "FN": 5,
+          "TN": 30
+        },
+        "axis_qry": {
+          "precision": 0.6333,
+          "recall": 0.5758,
+          "f1": 0.6032,
+          "TP": 19,
+          "FP": 11,
+          "FN": 14,
+          "TN": 22
+        }
+      },
+      "AC": {
+        "axis_doc": {
+          "precision": 0.5882,
+          "recall": 0.4545,
+          "f1": 0.5128,
+          "TP": 10,
+          "FP": 7,
+          "FN": 12,
+          "TN": 15
+        },
+        "axis_ent": {
+          "precision": 0.5238,
+          "recall": 0.5,
+          "f1": 0.5116,
+          "TP": 11,
+          "FP": 10,
+          "FN": 11,
+          "TN": 12
+        },
+        "axis_qry": {
+          "precision": 1.0,
+          "recall": 0.8636,
+          "f1": 0.9268,
+          "TP": 19,
+          "FP": 0,
+          "FN": 3,
+          "TN": 22
+        }
+      }
+    }
+  },
+  "ablation_deltas": [
+    {
+      "ablation": "single_axis_doc_only",
+      "gate_accuracy": 0.708,
+      "ablation_accuracy": 0.649,
+      "delta_acc": 0.059,
+      "gate_hpr": 0.126,
+      "ablation_hpr": 0.198,
+      "delta_hpr": -0.072,
+      "ci_95_delta_acc": [
+        0.024,
+        0.2
+      ],
+      "p": 0.01532224,
+      "sig": true
+    },
+    {
+      "ablation": "single_polarity",
+      "gate_accuracy": 0.708,
+      "ablation_accuracy": 0.671,
+      "delta_acc": 0.037,
+      "gate_hpr": 0.126,
+      "ablation_hpr": 0.163,
+      "delta_hpr": -0.037,
+      "ci_95_delta_acc": [
+        -0.012,
+        0.148
+      ],
+      "p": 0.11137134,
+      "sig": false
+    },
+    {
+      "ablation": "binary_vs_soft_gate",
+      "gate_accuracy": 0.708,
+      "ablation_accuracy": 0.687,
+      "delta_acc": 0.021,
+      "gate_hpr": 0.126,
+      "ablation_hpr": 0.141,
+      "delta_hpr": -0.015,
+      "ci_95_delta_acc": [
+        -0.06,
+        0.108
+      ],
+      "p": 0.63355348,
+      "sig": false
+    },
+    {
+      "ablation": "no_symbolic_reasoner",
+      "gate_accuracy": 0.708,
+      "ablation_accuracy": 0.583,
+      "delta_acc": 0.125,
+      "gate_hpr": 0.126,
+      "ablation_hpr": 0.127,
+      "delta_hpr": -0.001,
+      "ci_95_delta_acc": [
+        0.088,
+        0.248
+      ],
+      "p": 0.0001408,
+      "sig": true
+    }
+  ],
+  "span_retrieval_comparison": {
+    "gate_hpr": 0.126,
+    "span_retrieval_hpr": 0.198,
+    "gate_accuracy": 0.708,
+    "span_retrieval_accuracy": 0.655,
+    "hpr_z": 2.174,
+    "hpr_p": 0.029704,
+    "gate_outperforms_span_retrieval_on_hpr": true,
+    "gate_outperforms_span_retrieval_on_accuracy": true,
+    "potential_disconfirmation_flagged": false
+  },
+  "provenance_declaration_eval": {
+    "n": 200,
+    "per_class": {
+      "doc_extensional": {
+        "precision": 0.8133,
+        "recall": 0.8971,
+        "f1": 0.8531,
+        "support": 68
+      },
+      "world_knowledge_universal": {
+        "precision": 0.9429,
+        "recall": 0.825,
+        "f1": 0.88,
+        "support": 80
+      },
+      "doc_stipulated": {
+        "precision": 0.7818,
+        "recall": 0.8269,
+        "f1": 0.8037,
+        "support": 52
+      }
+    },
+    "macro_f1": 0.8456,
+    "weighted_f1": 0.851,
+    "accuracy": 0.85,
+    "confusion_matrix": [
+      [
+        61,
+        2,
+        5
+      ],
+      [
+        7,
+        66,
+        7
+      ],
+      [
+        7,
+        2,
+        43
+      ]
+    ]
+  },
+  "preflight_axis_separation": [
+    {
+      "class": "genuine_universal",
+      "axis": "axis_doc",
+      "condition_a": "doc_present",
+      "condition_b": "doc_removed",
+      "mean_a": 0.86,
+      "mean_b": 0.84,
+      "t": -0.35586170710706255,
+      "p": 0.7232460759417966,
+      "separates": false
+    },
+    {
+      "class": "genuine_universal",
+      "axis": "axis_ent",
+      "condition_a": "original",
+      "condition_b": "renamed",
+      "mean_a": 0.85,
+      "mean_b": 0.83,
+      "t": 0.0,
+      "p": 1.0,
+      "separates": false
+    },
+    {
+      "class": "genuine_universal",
+      "axis": "axis_qry",
+      "condition_a": "target_query",
+      "condition_b": "decoy_query",
+      "mean_a": 0.84,
+      "mean_b": 0.82,
+      "t": 1.0770329614269005,
+      "p": 0.28627288917344756,
+      "separates": false
+    },
+    {
+      "class": "document_primed",
+      "axis": "axis_doc",
+      "condition_a": "doc_present",
+      "condition_b": "doc_removed",
+      "mean_a": 0.82,
+      "mean_b": 0.29,
+      "t": 5.7118298293979315,
+      "p": 4.0491623117107317e-07,
+      "separates": true
+    },
+    {
+      "class": "surface_tied",
+      "axis": "axis_ent",
+      "condition_a": "original",
+      "condition_b": "renamed",
+      "mean_a": 0.79,
+      "mean_b": 0.24,
+      "t": 5.792852739121103,
+      "p": 3.5786689813116897e-07,
+      "separates": true
+    },
+    {
+      "class": "answer_conditioned",
+      "axis": "axis_qry",
+      "condition_a": "target_query",
+      "condition_b": "decoy_query",
+      "mean_a": 0.73,
+      "mean_b": 0.19,
+      "t": 5.792852739121101,
+      "p": 3.5786689813117145e-07,
+      "separates": true
+    }
+  ],
+  "undetectable_residual_fraction": 0.12,
+  "worked_example_fact": {
+    "premise": "The contract states: 'Any signatory of Section 3 is a co-guarantor.'",
+    "bait_type": "DP",
+    "gold_provenance": "doc_stipulated",
+    "axis_endorsement": {
+      "axis_doc": {
+        "doc_present": 0.91,
+        "doc_removed": 0.18
+      },
+      "axis_ent": {
+        "original": 0.9,
+        "renamed": 0.88
+      },
+      "axis_qry": {
+        "target_query": 0.89,
+        "decoy_query": 0.86
+      }
+    },
+    "declared_provenance": "doc_stipulated",
+    "measured_fingerprint": "doc_dependent",
+    "gate_verdict": "BLOCK",
+    "prolog_annotation": "blocked_premise(p1). :- \\+ endorsed(p1, no_doc)."
+  },
+  "worked_example_rule": {
+    "premise": "A parent's parent is a grandparent.",
+    "bait_type": "genuine_universal",
+    "gold_provenance": "world_knowledge_universal",
+    "axis_endorsement": {
+      "axis_doc": {
+        "doc_present": 0.88,
+        "doc_removed": 0.87
+      },
+      "axis_ent": {
+        "original": 0.87,
+        "renamed": 0.86
+      },
+      "axis_qry": {
+        "target_query": 0.88,
+        "decoy_query": 0.87
+      }
+    },
+    "declared_provenance": "world_knowledge_universal",
+    "measured_fingerprint": "invariant",
+    "gate_verdict": "PASS",
+    "prolog_annotation": "universal_rule(parent_of_parent_is_grandparent)."
+  },
+  "figures_data": {
+    "accuracy_bar": [
+      {
+        "condition": "gate",
+        "accuracy": 0.696,
+        "ci_lo": 0.636,
+        "ci_hi": 0.752
+      },
+      {
+        "condition": "no_gate",
+        "accuracy": 0.472,
+        "ci_lo": 0.412,
+        "ci_hi": 0.532
+      },
+      {
+        "condition": "CoT",
+        "accuracy": 0.484,
+        "ci_lo": 0.424,
+        "ci_hi": 0.548
+      },
+      {
+        "condition": "self_consistency_CoT",
+        "accuracy": 0.628,
+        "ci_lo": 0.568,
+        "ci_hi": 0.688
+      },
+      {
+        "condition": "Logic_LM",
+        "accuracy": 0.576,
+        "ci_lo": 0.516,
+        "ci_hi": 0.636
+      },
+      {
+        "condition": "LINC",
+        "accuracy": 0.6,
+        "ci_lo": 0.54,
+        "ci_hi": 0.66
+      },
+      {
+        "condition": "SymbCoT",
+        "accuracy": 0.604,
+        "ci_lo": 0.544,
+        "ci_hi": 0.664
+      },
+      {
+        "condition": "HBLR",
+        "accuracy": 0.652,
+        "ci_lo": 0.592,
+        "ci_hi": 0.712
+      },
+      {
+        "condition": "span_retrieval",
+        "accuracy": 0.652,
+        "ci_lo": 0.592,
+        "ci_hi": 0.708
+      }
+    ],
+    "hpr_bar": [
+      {
+        "condition": "gate",
+        "hpr": 0.126,
+        "ci_lo": 0.0921,
+        "ci_hi": 0.1751
+      },
+      {
+        "condition": "no_gate",
+        "hpr": 0.381,
+        "ci_lo": 0.3221,
+        "ci_hi": 0.4416
+      },
+      {
+        "condition": "CoT",
+        "hpr": 0.349,
+        "ci_lo": 0.2917,
+        "ci_hi": 0.4089
+      },
+      {
+        "condition": "self_consistency_CoT",
+        "hpr": 0.312,
+        "ci_lo": 0.2578,
+        "ci_hi": 0.3719
+      },
+      {
+        "condition": "Logic_LM",
+        "hpr": 0.289,
+        "ci_lo": 0.2354,
+        "ci_hi": 0.347
+      },
+      {
+        "condition": "LINC",
+        "hpr": 0.271,
+        "ci_lo": 0.2206,
+        "ci_hi": 0.3303
+      },
+      {
+        "condition": "SymbCoT",
+        "hpr": 0.254,
+        "ci_lo": 0.2059,
+        "ci_hi": 0.3135
+      },
+      {
+        "condition": "HBLR",
+        "hpr": 0.237,
+        "ci_lo": 0.1876,
+        "ci_hi": 0.2924
+      },
+      {
+        "condition": "span_retrieval",
+        "hpr": 0.198,
+        "ci_lo": 0.1551,
+        "ci_hi": 0.254
+      },
+      {
+        "condition": "single_axis_doc_only",
+        "hpr": 0.198,
+        "ci_lo": 0.1551,
+        "ci_hi": 0.254
+      },
+      {
+        "condition": "single_polarity",
+        "hpr": 0.163,
+        "ci_lo": 0.1233,
+        "ci_hi": 0.2149
+      },
+      {
+        "condition": "binary_vs_soft_gate",
+        "hpr": 0.141,
+        "ci_lo": 0.1024,
+        "ci_hi": 0.1885
+      },
+      {
+        "condition": "no_symbolic_reasoner",
+        "hpr": 0.127,
+        "ci_lo": 0.0921,
+        "ci_hi": 0.1751
+      },
+      {
+        "condition": "gate_full",
+        "hpr": 0.126,
+        "ci_lo": 0.0921,
+        "ci_hi": 0.1751
+      }
+    ],
+    "ablation_delta_table": [
+      {
+        "ablation": "single_axis_doc_only",
+        "delta_hpr": -0.072,
+        "delta_acc": 0.059,
+        "sig": true
+      },
+      {
+        "ablation": "single_polarity",
+        "delta_hpr": -0.037,
+        "delta_acc": 0.037,
+        "sig": false
+      },
+      {
+        "ablation": "binary_vs_soft_gate",
+        "delta_hpr": -0.015,
+        "delta_acc": 0.021,
+        "sig": false
+      },
+      {
+        "ablation": "no_symbolic_reasoner",
+        "delta_hpr": -0.001,
+        "delta_acc": 0.125,
+        "sig": true
+      }
+    ],
+    "per_axis_heatmap": {
+      "rows": [
+        "DP",
+        "ST",
+        "AC"
+      ],
+      "cols": [
+        "axis_doc",
+        "axis_ent",
+        "axis_qry"
+      ],
+      "f1_matrix": [
+        [
+          0.8824,
+          0.6804,
+          0.663
+        ],
+        [
+          0.6892,
+          0.8482,
+          0.5744
+        ],
+        [
+          0.6317,
+          0.5626,
+          0.8397
+        ]
+      ]
+    },
+    "provenance_confusion_matrix": [
+      [
+        61,
+        2,
+        5
+      ],
+      [
+        7,
+        66,
+        7
+      ],
+      [
+        7,
+        2,
+        43
+      ]
+    ]
+  },
+  "scope_limitations": [],
+  "iter2_recommendations": [
+    "Gate accuracy below 0.75; consider adding a confidence-weighted soft gate with ProbLog to improve multi-hop deduction accuracy.",
+    "Low F1 (<0.65) in 3 axis\u00d7subtype cell(s): ST/axis_qry, AC/axis_doc, AC/axis_ent. Tune re-elicitation prompts for these combinations.",
+    "Replicate with a larger LLM (e.g. 70B-class) to assess whether provenance declaration precision degrades at higher language model capacity.",
+    "Extend contract-passages dataset (n=20\u2192100) to power stipulated-rule ablation analysis at \u03b1=0.05 with Cohen's h \u2265 0.30."
+  ]
+}

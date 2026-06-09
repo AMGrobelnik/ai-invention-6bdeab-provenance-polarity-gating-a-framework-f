@@ -1,0 +1,13 @@
+{
+  "go_nogo": true,
+  "axis_separability": {
+    "H_stat": 27.363636363636367,
+    "p_value": 1.1430411388344114e-06
+  },
+  "type_A_mean_endorsement": 0.95,
+  "type_B_mean_endorsement": 1.0,
+  "bait_mean_endorsement": 0.0,
+  "n_A": 10,
+  "n_B": 10,
+  "n_bait": 10
+}

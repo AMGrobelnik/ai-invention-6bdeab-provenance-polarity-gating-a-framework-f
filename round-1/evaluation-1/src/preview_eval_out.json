@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "evaluation_name": "Provenance-Polarity Gate Evaluation",
+    "description": "Statistical evaluation of HPR reduction and multi-hop deduction accuracy for the Provenance-Polarity Gate vs baselines and ablations.",
+    "baselines": [
+      "gate",
+      "no_gate",
+      "CoT"
+    ],
+    "ablations": [
+      "single_axis_doc_only",
+      "single_polarity",
+      "binary_vs_soft_gate"
+    ],
+    "n_instances": 250
+  },
+  "metrics_agg": {
+    "gate_accuracy": 0.696,
+    "baseline_accuracy": 0.416,
+    "accuracy_delta": 0.28,
+    "gate_hpr": 0.1192,
+    "baseline_hpr": 0.3581,
+    "hpr_reduction": 0.2389,
+    "hpr_z_stat": -13.5079,
+    "hpr_p_value": 0.0,
+    "cohen_h": 0.5945,
+    "provenance_macro_f1": 0.8456,
+    "undetectable_residual_fraction": 0.12
+  },
+  "datasets": [
+    {
+      "dataset": "CLUTRR",
+      "examples": [
+        {
+          "input": "Multi-hop deduction query on CLUTRR, bait_type=DP, n_premises=3",
+          "output": "Gate verdict: CORRECT; gate_hallucinated=0/3",
+          "predict_gate": "correct=1 hallucinated_premises=0",
+          "predict_baseline": "correct=0 hallucinated_premises=1",
+          "eval_gate_correct": 1.0,
+          "eval_baseline_correct": 0.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.3333
+        },
+        {
+          "input": "Multi-hop deduction query on CLUTRR, bait_type=ST, n_premises=4",
+          "output": "Gate verdict: INCORRECT; gate_hallucinated=0/4",
+          "predict_gate": "correct=0 hallucinated_premises=0",
+          "predict_baseline": "correct=0 hallucinated_premises=2",
+          "eval_gate_correct": 0.0,
+          "eval_baseline_correct": 0.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.5
+        },
+        {
+          "input": "Multi-hop deduction query on CLUTRR, bait_type=AC, n_premises=3",
+          "output": "Gate verdict: CORRECT; gate_hallucinated=0/3",
+          "predict_gate": "correct=1 hallucinated_premises=0",
+          "predict_baseline": "correct=0 hallucinated_premises=0",
+          "eval_gate_correct": 1.0,
+          "eval_baseline_correct": 0.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "ProofWriter",
+      "examples": [
+        {
+          "input": "Multi-hop deduction query on ProofWriter, bait_type=DP, n_premises=3",
+          "output": "Gate verdict: CORRECT; gate_hallucinated=0/3",
+          "predict_gate": "correct=1 hallucinated_premises=0",
+          "predict_baseline": "correct=1 hallucinated_premises=2",
+          "eval_gate_correct": 1.0,
+          "eval_baseline_correct": 1.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.6667
+        },
+        {
+          "input": "Multi-hop deduction query on ProofWriter, bait_type=ST, n_premises=3",
+          "output": "Gate verdict: INCORRECT; gate_hallucinated=0/3",
+          "predict_gate": "correct=0 hallucinated_premises=0",
+          "predict_baseline": "correct=1 hallucinated_premises=1",
+          "eval_gate_correct": 0.0,
+          "eval_baseline_correct": 1.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.3333
+        },
+        {
+          "input": "Multi-hop deduction query on ProofWriter, bait_type=AC, n_premises=3",
+          "output": "Gate verdict: CORRECT; gate_hallucinated=0/3",
+          "predict_gate": "correct=1 hallucinated_premises=0",
+          "predict_baseline": "correct=0 hallucinated_premises=1",
+          "eval_gate_correct": 1.0,
+          "eval_baseline_correct": 0.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.3333
+        }
+      ]
+    },
+    {
+      "dataset": "micro_ontology",
+      "examples": [
+        {
+          "input": "Multi-hop deduction query on micro_ontology, bait_type=DP, n_premises=6",
+          "output": "Gate verdict: CORRECT; gate_hallucinated=0/6",
+          "predict_gate": "correct=1 hallucinated_premises=0",
+          "predict_baseline": "correct=0 hallucinated_premises=3",
+          "eval_gate_correct": 1.0,
+          "eval_baseline_correct": 0.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.5
+        },
+        {
+          "input": "Multi-hop deduction query on micro_ontology, bait_type=ST, n_premises=5",
+          "output": "Gate verdict: CORRECT; gate_hallucinated=1/5",
+          "predict_gate": "correct=1 hallucinated_premises=1",
+          "predict_baseline": "correct=0 hallucinated_premises=3",
+          "eval_gate_correct": 1.0,
+          "eval_baseline_correct": 0.0,
+          "eval_gate_hpr": 0.2,
+          "eval_baseline_hpr": 0.6
+        },
+        {
+          "input": "Multi-hop deduction query on micro_ontology, bait_type=AC, n_premises=3",
+          "output": "Gate verdict: CORRECT; gate_hallucinated=0/3",
+          "predict_gate": "correct=1 hallucinated_premises=0",
+          "predict_baseline": "correct=1 hallucinated_premises=2",
+          "eval_gate_correct": 1.0,
+          "eval_baseline_correct": 1.0,
+          "eval_gate_hpr": 0.0,
+          "eval_baseline_hpr": 0.6667
+        }
+      ]
+    }
+  ]
+}

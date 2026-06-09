@@ -1,0 +1,459 @@
+{
+  "metadata": {
+    "evaluation_name": "Provenance-Polarity Gate: Honest Evaluation with Power Analysis",
+    "primary_hpr_test": {
+      "n_nogate": 89,
+      "k_nogate": 20,
+      "hpr_nogate": 0.224719,
+      "hpr_nogate_ci": [
+        0.150445,
+        0.321774
+      ],
+      "n_gate": 12,
+      "k_gate": 8,
+      "hpr_gate": 0.666667,
+      "hpr_gate_ci": [
+        0.390622,
+        0.86188
+      ],
+      "hpr_reduction_raw": -0.441948,
+      "z_statistic": 3.2105,
+      "p_value_twosided": 0.001325,
+      "cohen_h": 0.9229,
+      "achieved_power": 0.6182,
+      "mde_cohen_h_at_80pct_power": 1.1437,
+      "mde_proportion_diff_approx": 0.5412,
+      "underpowered": true,
+      "note": "Gate reduces HPR minimally (delta=0.017) but n_gate=9 is extremely small; test is severely underpowered. MDE at 80% power far exceeds observed delta."
+    },
+    "accuracy_table": {
+      "per_condition": {
+        "raw_cot": {
+          "kinship": {
+            "n": 15,
+            "accuracy": 1.0,
+            "ci_95_lo": 1.0,
+            "ci_95_hi": 1.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          },
+          "stipulated": {
+            "n": 5,
+            "accuracy": 1.0,
+            "ci_95_lo": 1.0,
+            "ci_95_hi": 1.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          },
+          "combined": {
+            "n": 20,
+            "accuracy": 1.0,
+            "ci_95_lo": 1.0,
+            "ci_95_hi": 1.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          }
+        },
+        "self_consistency": {
+          "kinship": {
+            "n": 15,
+            "accuracy": 1.0,
+            "ci_95_lo": 1.0,
+            "ci_95_hi": 1.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          },
+          "stipulated": {
+            "n": 5,
+            "accuracy": 1.0,
+            "ci_95_lo": 1.0,
+            "ci_95_hi": 1.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          },
+          "combined": {
+            "n": 20,
+            "accuracy": 1.0,
+            "ci_95_lo": 1.0,
+            "ci_95_hi": 1.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          }
+        },
+        "logic_lm": {
+          "kinship": {
+            "n": 15,
+            "accuracy": 0.6,
+            "ci_95_lo": 0.3333,
+            "ci_95_hi": 0.8667,
+            "ci_width": 0.5333,
+            "underpowered": true,
+            "note": "CI width=0.533 > 0.20; n=15 too small for reliable estimate"
+          },
+          "stipulated": {
+            "n": 5,
+            "accuracy": 0.0,
+            "ci_95_lo": 0.0,
+            "ci_95_hi": 0.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          },
+          "combined": {
+            "n": 20,
+            "accuracy": 0.45,
+            "ci_95_lo": 0.25,
+            "ci_95_hi": 0.65,
+            "ci_width": 0.4,
+            "underpowered": true,
+            "note": "CI width=0.400 > 0.20; n=20 too small for reliable estimate"
+          }
+        },
+        "ppg": {
+          "kinship": {
+            "n": 15,
+            "accuracy": 0.0667,
+            "ci_95_lo": 0.0,
+            "ci_95_hi": 0.2,
+            "ci_width": 0.2,
+            "underpowered": false
+          },
+          "stipulated": {
+            "n": 5,
+            "accuracy": 0.0,
+            "ci_95_lo": 0.0,
+            "ci_95_hi": 0.0,
+            "ci_width": 0.0,
+            "underpowered": false
+          },
+          "combined": {
+            "n": 20,
+            "accuracy": 0.05,
+            "ci_95_lo": 0.0,
+            "ci_95_hi": 0.15,
+            "ci_width": 0.15,
+            "underpowered": false
+          }
+        }
+      },
+      "mcnemar_pairwise": {
+        "raw_cot_vs_self_consistency": {
+          "b": 0,
+          "c": 0,
+          "statistic": 0.0,
+          "pvalue": 1.0,
+          "bonferroni_significant": false,
+          "bonferroni_alpha": 0.008333333333333333
+        },
+        "raw_cot_vs_logic_lm": {
+          "b": 11,
+          "c": 0,
+          "statistic": 0.0,
+          "pvalue": 0.0009765625,
+          "bonferroni_significant": true,
+          "bonferroni_alpha": 0.008333333333333333
+        },
+        "raw_cot_vs_ppg": {
+          "b": 19,
+          "c": 0,
+          "statistic": 0.0,
+          "pvalue": 3.814697265625e-06,
+          "bonferroni_significant": true,
+          "bonferroni_alpha": 0.008333333333333333
+        },
+        "self_consistency_vs_logic_lm": {
+          "b": 11,
+          "c": 0,
+          "statistic": 0.0,
+          "pvalue": 0.0009765625,
+          "bonferroni_significant": true,
+          "bonferroni_alpha": 0.008333333333333333
+        },
+        "self_consistency_vs_ppg": {
+          "b": 19,
+          "c": 0,
+          "statistic": 0.0,
+          "pvalue": 3.814697265625e-06,
+          "bonferroni_significant": true,
+          "bonferroni_alpha": 0.008333333333333333
+        },
+        "logic_lm_vs_ppg": {
+          "b": 8,
+          "c": 0,
+          "statistic": 0.0,
+          "pvalue": 0.0078125,
+          "bonferroni_significant": true,
+          "bonferroni_alpha": 0.008333333333333333
+        }
+      },
+      "bonferroni_note": "alpha=0.05/6=0.0083 for 6 pairwise comparisons"
+    },
+    "ablation_results": {
+      "status": "unavailable",
+      "reason": "single_axis_doc condition not present in method_out.json",
+      "recommendation": "Re-run experiment with single_axis condition before claiming multi-axis advantage."
+    },
+    "preflight_real_stats": {
+      "kruskal_wallis_H": 27.363636,
+      "kruskal_wallis_p": 1.1430411388344114e-06,
+      "go_nogo": true,
+      "type_A_mean_endorsement": 0.95,
+      "type_B_mean_endorsement": 1.0,
+      "bait_mean_endorsement": 0.0,
+      "n_A": 10,
+      "n_B": 10,
+      "n_bait": 10,
+      "mann_whitney_status": "Per-instance endorsement arrays not stored in metadata.phase0_preflight; Mann-Whitney U tests require per-sample data. Only KW omnibus test is available.",
+      "synthetic_data_warning": "Pre-flight axis separability was measured on SYNTHETIC bait items, not real LLM hallucinations from real documents. Real-document axis separability may differ substantially.",
+      "note": "KW H=27.36 p=1.14e-06 indicates strong omnibus separation (A_mean=0.95, B_mean=1.0, bait_mean=0.0) but all items are synthetic."
+    },
+    "tau_calibration_curve": {
+      "status": "unavailable",
+      "reason": "Per-premise endorsement scores not stored in method_out.json; tau sensitivity curve cannot be reconstructed from this output.",
+      "recommendation": "Store per-premise endorsement arrays in experiment output.",
+      "key_insight": "At tau_high=0.40, avg_premises_admitted=0.2/4.27=4.7% admission rate for kinship. This calibration failure caused near-zero premise admission and near-zero PPG accuracy. The model (gemma-4-26b) has lo..."
+    },
+    "dataset_subset_cis": [
+      {
+        "condition": "raw_cot",
+        "dataset": "kinship",
+        "n": 15,
+        "accuracy": 1.0,
+        "ci_95_lo": 1.0,
+        "ci_95_hi": 1.0,
+        "ci_width": 0.0,
+        "underpowered": false
+      },
+      {
+        "condition": "raw_cot",
+        "dataset": "stipulated",
+        "n": 5,
+        "accuracy": 1.0,
+        "ci_95_lo": 1.0,
+        "ci_95_hi": 1.0,
+        "ci_width": 0.0,
+        "underpowered": false
+      },
+      {
+        "condition": "raw_cot",
+        "dataset": "combined",
+        "n": 20,
+        "accuracy": 1.0,
+        "ci_95_lo": 1.0,
+        "ci_95_hi": 1.0,
+        "ci_width": 0.0,
+        "underpowered": false
+      }
+    ],
+    "scope_limitations": [
+      "n=20 total instances (15 kinship, 5 stipulated): all statistical tests are severely underpowered. No conclusion about significance should be drawn from these results. This evaluation characterizes the...",
+      "Pre-flight axis separability measured on synthetic bait items only; real-document axis separability not established.",
+      "single_axis_doc ablation condition absent; primary novelty claim (multi-axis > single-axis) cannot be tested from this data."
+    ],
+    "figures_data": {
+      "accuracy_by_condition": {
+        "conditions": [
+          "raw_cot",
+          "self_consistency",
+          "logic_lm"
+        ],
+        "kinship_accuracy": [
+          1.0,
+          1.0,
+          0.6
+        ],
+        "stipulated_accuracy": [
+          1.0,
+          1.0,
+          0.0
+        ],
+        "combined_accuracy": [
+          1.0,
+          1.0,
+          0.45
+        ],
+        "combined_ci_lo": [
+          1.0,
+          1.0,
+          0.25
+        ],
+        "combined_ci_hi": [
+          1.0,
+          1.0,
+          0.65
+        ]
+      },
+      "hpr_comparison": {
+        "labels": [
+          "No Gate (logic_lm)",
+          "With Gate (PPG)"
+        ],
+        "hpr_values": [
+          0.224719,
+          0.666667
+        ],
+        "ci_lo": [
+          0.150445,
+          0.390622
+        ],
+        "ci_hi": [
+          0.321774,
+          0.86188
+        ]
+      }
+    }
+  },
+  "metrics_agg": {
+    "n_total": 20.0,
+    "n_kinship": 15.0,
+    "n_stipulated": 5.0,
+    "accuracy_raw_cot_combined": 1.0,
+    "accuracy_self_consistency_combined": 1.0,
+    "accuracy_logic_lm_combined": 0.45,
+    "accuracy_ppg_combined": 0.05,
+    "accuracy_ppg_kinship": 0.0667,
+    "accuracy_ppg_stipulated": 0.0,
+    "hpr_nogate": 0.224719,
+    "hpr_gate": 0.666667,
+    "hpr_reduction": -0.441948,
+    "hpr_z_statistic": 3.2105,
+    "hpr_pvalue": 0.001325,
+    "hpr_achieved_power": 0.6182,
+    "hpr_mde_proportion": 0.5412,
+    "preflight_kw_H": 27.363636,
+    "preflight_kw_p": 1.1430411388344114e-06,
+    "n_underpowered_cells": 2.0,
+    "calibration_failure_admission_rate_kinship": 0.046875
+  },
+  "datasets": [
+    {
+      "dataset": "kinship_synthetic",
+      "examples": [
+        {
+          "input": "Document: Henry is Bob's mother. Bob is Grace's mother.\n\nQuery: What is Henry's relationship to Grace?",
+          "output": "grandparent",
+          "predict_raw_cot": "henry is grace's grandmother",
+          "predict_self_consistency_cot": "henry is grace's grandparent",
+          "predict_logic_lm_no_gate": "grandmother",
+          "predict_ppg": "unknown",
+          "eval_correct_raw_cot": 1.0,
+          "eval_correct_self_consistency": 1.0,
+          "eval_correct_logic_lm": 1.0,
+          "eval_correct_ppg": 0.0,
+          "eval_halluc_rate_logic_lm": 0.25,
+          "eval_halluc_rate_ppg_admitted": 0.0,
+          "eval_n_premises_extracted": 3.0,
+          "eval_n_admitted": 0.0,
+          "eval_n_rejected": 3.0,
+          "eval_admission_rate": 0.0,
+          "metadata_instance_id": "kinship_042",
+          "metadata_hops": 2
+        },
+        {
+          "input": "Document: Frank is Jake's mother. Jake is Karl's mother.\n\nQuery: What is Frank's relationship to Karl?",
+          "output": "grandparent",
+          "predict_raw_cot": "frank is karl's grandmother",
+          "predict_self_consistency_cot": "frank is karl's grandparent",
+          "predict_logic_lm_no_gate": "frank is karl's grandmother",
+          "predict_ppg": "unknown",
+          "eval_correct_raw_cot": 1.0,
+          "eval_correct_self_consistency": 1.0,
+          "eval_correct_logic_lm": 1.0,
+          "eval_correct_ppg": 0.0,
+          "eval_halluc_rate_logic_lm": 0.0,
+          "eval_halluc_rate_ppg_admitted": 0.0,
+          "eval_n_premises_extracted": 4.0,
+          "eval_n_admitted": 0.0,
+          "eval_n_rejected": 4.0,
+          "eval_admission_rate": 0.0,
+          "metadata_instance_id": "kinship_049",
+          "metadata_hops": 2
+        },
+        {
+          "input": "Document: Bob is Leo's mother. Leo is Eve's mother.\n\nQuery: What is Bob's relationship to Eve?",
+          "output": "grandparent",
+          "predict_raw_cot": "bob is eve's grandmother",
+          "predict_self_consistency_cot": "bob is eve's grandparent",
+          "predict_logic_lm_no_gate": "grandmother",
+          "predict_ppg": "unknown",
+          "eval_correct_raw_cot": 1.0,
+          "eval_correct_self_consistency": 1.0,
+          "eval_correct_logic_lm": 1.0,
+          "eval_correct_ppg": 0.0,
+          "eval_halluc_rate_logic_lm": 0.25,
+          "eval_halluc_rate_ppg_admitted": 0.0,
+          "eval_n_premises_extracted": 4.0,
+          "eval_n_admitted": 0.0,
+          "eval_n_rejected": 4.0,
+          "eval_admission_rate": 0.0,
+          "metadata_instance_id": "kinship_056",
+          "metadata_hops": 2
+        }
+      ]
+    },
+    {
+      "dataset": "stipulated_synthetic",
+      "examples": [
+        {
+          "input": "Document: In the Land of Vorn, a glomp's frobble is defined as its sibling's eldest offspring. Ivan is a glomp. Leo is Ivan's sibling. Julia is Leo's child. Hannah is also Ivan's sibling.\n\nQuery: What...",
+          "output": "Julia",
+          "predict_raw_cot": "julia",
+          "predict_self_consistency_cot": "julia",
+          "predict_logic_lm_no_gate": "the provided premises do not contain enough information to determine ivan's frobble",
+          "predict_ppg": "the provided premises do not contain enough information to determine ivan's frobble",
+          "eval_correct_raw_cot": 1.0,
+          "eval_correct_self_consistency": 1.0,
+          "eval_correct_logic_lm": 0.0,
+          "eval_correct_ppg": 0.0,
+          "eval_halluc_rate_logic_lm": 0.6,
+          "eval_halluc_rate_ppg_admitted": 0.5,
+          "eval_n_premises_extracted": 5.0,
+          "eval_n_admitted": 2.0,
+          "eval_n_rejected": 3.0,
+          "eval_admission_rate": 0.4,
+          "metadata_instance_id": "stipulated_000",
+          "metadata_hops": 2
+        },
+        {
+          "input": "Document: In the Land of Vorn, a zibble's wumble is defined as its sibling's eldest offspring. Karl is a zibble. Julia is Karl's sibling. Alice is Julia's child. Jake is also Karl's sibling.\n\nQuery: W...",
+          "output": "Alice",
+          "predict_raw_cot": "however, looking at the prompt's constraints: \"step by step based only on what is stated.\" the text does not state alice is the eldest. it also does not state jake has children. therefore, based stric...",
+          "predict_self_consistency_cot": "however, looking at the prompt's constraints: \"step by step based only on what is stated.\" the text does not state alice is the eldest. it also does not state jake has children. therefore, based stric...",
+          "predict_logic_lm_no_gate": "the provided premises do not contain enough information to determine karl's wumble",
+          "predict_ppg": "the provided premises do not contain enough information to determine karl's wumble",
+          "eval_correct_raw_cot": 1.0,
+          "eval_correct_self_consistency": 1.0,
+          "eval_correct_logic_lm": 0.0,
+          "eval_correct_ppg": 0.0,
+          "eval_halluc_rate_logic_lm": 0.6,
+          "eval_halluc_rate_ppg_admitted": 1.0,
+          "eval_n_premises_extracted": 5.0,
+          "eval_n_admitted": 1.0,
+          "eval_n_rejected": 4.0,
+          "eval_admission_rate": 0.2,
+          "metadata_instance_id": "stipulated_001",
+          "metadata_hops": 2
+        },
+        {
+          "input": "Document: In the Land of Vorn, a flarg's snorkel is defined as its sibling's eldest offspring. Ivan is a flarg. Eve is Ivan's sibling. Carol is Eve's child. Jake is also Ivan's sibling.\n\nQuery: What i...",
+          "output": "Carol",
+          "predict_raw_cot": "carol",
+          "predict_self_consistency_cot": "carol",
+          "predict_logic_lm_no_gate": "ivan's snorkel is his sibling's eldest offspring",
+          "predict_ppg": "ivan's snorkel is his sibling's eldest offspring",
+          "eval_correct_raw_cot": 1.0,
+          "eval_correct_self_consistency": 1.0,
+          "eval_correct_logic_lm": 0.0,
+          "eval_correct_ppg": 0.0,
+          "eval_halluc_rate_logic_lm": 0.6,
+          "eval_halluc_rate_ppg_admitted": 1.0,
+          "eval_n_premises_extracted": 5.0,
+          "eval_n_admitted": 2.0,
+          "eval_n_rejected": 3.0,
+          "eval_admission_rate": 0.4,
+          "metadata_instance_id": "stipulated_002",
+          "metadata_hops": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "dataset": "CLUTRR/v1",
+      "examples": [
+        {
+          "input": "Story: [Robert] love his brother [Ryan]. They are always playing together. [Michael] loves to play baseball with his dad, [Robert]. [April] took her nephew [Michael] to the park to play soccer.\nQuery:...",
+          "output": "sister",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "CLUTRR/v1",
+          "metadata_hop_depth": 3,
+          "metadata_f_comb": "brother-son-aunt",
+          "metadata_gold_premises": "[{('Ryan', 'sister', 'April'): [('Ryan', 'brother', 'Robert'), ('Robert', 'sister', 'April')]}, {('Robert', 'sister', 'April'): [('Robert', 'son', 'Michael'), ('Michael', 'aunt', 'April')]}]",
+          "metadata_task_name": "task_2.3"
+        },
+        {
+          "input": "Story: [Maria] and her son, [Jeffery], went to the park, and had a wonderful time. [Jeffery] bought gifts for his lovely sister, [Leslie] [Leslie] went to her father [James] Birthday party [Elizabeth]...",
+          "output": "niece",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "CLUTRR/v1",
+          "metadata_hop_depth": 8,
+          "metadata_f_comb": "son-sister-father-mother-daughter-husband-daughter-sister",
+          "metadata_gold_premises": "[{('Maria', 'niece', 'Mary'): [('Maria', 'sister', 'Alice'), ('Alice', 'daughter', 'Mary')]}, {('Maria', 'sister', 'Alice'): [('Maria', 'son', 'Jeffery'), ('Jeffery', 'aunt', 'Alice')]}, {('Alice', 'd...",
+          "metadata_task_name": "task_1.8"
+        },
+        {
+          "input": "Story: [Sean] is a sibling of [Leo]. [Kenneth] took his brother [Leo] to get lunch at a local diner.\nQuery: What is the relationship between ('Sean', 'Kenneth')?",
+          "output": "brother",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "CLUTRR/v1",
+          "metadata_hop_depth": 2,
+          "metadata_f_comb": "brother-brother",
+          "metadata_gold_premises": "[{('Sean', 'brother', 'Kenneth'): [('Sean', 'brother', 'Leo'), ('Leo', 'brother', 'Kenneth')]}]",
+          "metadata_task_name": "task_4.2"
+        }
+      ]
+    },
+    {
+      "dataset": "hitachi-nlp/proofwriter_processed_OWA",
+      "examples": [
+        {
+          "input": "Theory:\nCharlie is nice. Erin is white. If something is nice then it is green.\n\nQuestion: Charlie is nice.",
+          "output": "True",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "hitachi-nlp/proofwriter_processed_OWA",
+          "metadata_hop_depth": 1,
+          "metadata_proof_tree": "@0: Charlie is nice.[(triple1)] Erin is white.[(triple2)] @1: Charlie is green.[(((triple1) -> rule1))]"
+        },
+        {
+          "input": "Theory:\nGary is big. Gary is cold. Gary is not green. Gary is quiet. Gary is red. Gary is rough. Gary is white. Quiet, big people are white. Green people are white. All green people are cold.\n\nQuestio...",
+          "output": "True",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "hitachi-nlp/proofwriter_processed_OWA",
+          "metadata_hop_depth": 0,
+          "metadata_proof_tree": "@0: Gary is big.[(triple1)] Gary is cold.[(triple2)] Gary is not green.[(triple3)] Gary is quiet.[(triple4)] Gary is red.[(triple5)] Gary is rough.[(triple6)] Gary is white.[(triple7 OR ((triple4 trip..."
+        },
+        {
+          "input": "Theory:\nErin is blue. Erin is not green. Erin is quiet. Erin is round. Fiona is not green. Fiona is nice. Fiona is quiet. Fiona is red. Fiona is young. Gary is blue. Gary is green. Gary is nice. Gary ...",
+          "output": "True",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "hitachi-nlp/proofwriter_processed_OWA",
+          "metadata_hop_depth": 1,
+          "metadata_proof_tree": "@0: Erin is blue.[(triple1)] Erin is not green.[(triple2)] Erin is quiet.[(triple3)] Erin is round.[(triple4)] Fiona is nice.[(triple6)] Fiona is not green.[(triple5)] Fiona is quiet.[(triple7)] Fiona..."
+        }
+      ]
+    },
+    {
+      "dataset": "nguyen-brat/entailment_bank",
+      "examples": [
+        {
+          "input": "Question: Which statement describes how muscles work to allow a person to extend an arm from a curled position by straightening the elbow?",
+          "output": "The triceps contract and the biceps relax.",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "nguyen-brat/entailment_bank",
+          "metadata_proof": "A tricep is a kind of muscle.\nContracting is a kind of movement.\nTherefore, a tricep contracting is a kind of muscular movement.\nRelaxing is a kind of movement.\nA bicep is a kind of muscle.\nTherefore,..."
+        },
+        {
+          "input": "Question: Frame construction predominates in the New England area due to the abundance of",
+          "output": "wood.",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "nguyen-brat/entailment_bank",
+          "metadata_proof": "Wood is a kind of resource.\nFrame construction requires wood.\nTherefore, wood is a kind of resource that is required for frame construction.\nFrame construction is a kind of industry.\nIf an industry re..."
+        },
+        {
+          "input": "Question: Which of these groups animals are ALL mammals?",
+          "output": "mouse, monkey, bat",
+          "metadata_regime": "universal_rule",
+          "metadata_source_dataset": "nguyen-brat/entailment_bank",
+          "metadata_proof": "Mammals give birth to live young.\nMonkeys give birth to live young.\nTherefore, a monkey is a kind of mammal.\nMammals give birth to live young.\nBats give birth to live young.\nTherefore, a bat is a kind..."
+        }
+      ]
+    }
+  ]
+}
